@@ -1,0 +1,20 @@
+{
+  "name": "ktlbd1",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Kattali Textile Ltd - Official Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatalmonk/ktlbd1.git"
+  },
+  "homepage": "https://fatalmonk.github.io/ktlbd1/",
+  "scripts": {
+    "dev": "cd project && npm run dev",
+    "build": "cd project && npm run build",
+    "preview": "cd project && npm run preview",
+    "lint": "cd project && npm run lint",
+    "install:all": "npm install && cd project && npm install"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

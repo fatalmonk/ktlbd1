@@ -9,7 +9,7 @@ export default defineConfig({
   },
   server: {
     // Expose the dev server on all network interfaces.
-    // This enables access from external devices and cloud previews (Replit/Vercel).
+    // This enables access from external devices and cloud previews.
     host: true,
 
     // Keep the default dev port; CLI flags (e.g. `--port 5174`) will override this in CI.
@@ -17,17 +17,15 @@ export default defineConfig({
     strictPort: true,
 
     // Allow known preview hostnames to pass Vite's host check when tunneling or in cloud IDEs.
-    // Leading dots mean "any subdomain of" (e.g., .vercel.app matches *.vercel.app).
     // Set to `true` to disable checks entirely, but we prefer an allowlist for safety.
     allowedHosts: [
       'localhost',
       '127.0.0.1',
-      '.vercel.app',
       '.repl.co',
       '.id.repl.co',
     ],
   },
-  // Set base to root for Vercel deployment
+  // Set base to root for deployment
   base: '/',
   preview: {
     port: 4173,

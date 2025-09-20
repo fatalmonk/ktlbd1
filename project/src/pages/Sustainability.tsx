@@ -3,6 +3,14 @@ import { Droplets, Zap, Users, Leaf, Award, Recycle, Heart, Globe } from 'lucide
 import ResponsiveImage from '../components/ResponsiveImage';
 
 const Sustainability = () => {
+  // ARIA attributes for progress bars
+  const getProgressBarProps = (progress: number) => ({
+    'aria-valuenow': progress.toString(),
+    'aria-valuemin': '0',
+    'aria-valuemax': '100',
+    'aria-label': `Progress: ${progress}%`
+  });
+
   const initiatives = [
     {
       icon: Droplets,
@@ -45,10 +53,10 @@ const Sustainability = () => {
   ];
 
   const environmentalGoals = [
-    { goal: 'Reduce water consumption by 30%', progress: 75, year: '2025' },
-    { goal: 'Achieve 50% renewable energy usage', progress: 40, year: '2026' },
-    { goal: 'Zero waste to landfill', progress: 60, year: '2025' },
-    { goal: 'Carbon neutral operations', progress: 35, year: '2030' },
+    { goal: 'Reduce water consumption by 30%', progress: 75, year: '2025', progressClass: 'progress-75' },
+    { goal: 'Achieve 50% renewable energy usage', progress: 40, year: '2026', progressClass: 'progress-40' },
+    { goal: 'Zero waste to landfill', progress: 60, year: '2025', progressClass: 'progress-60' },
+    { goal: 'Carbon neutral operations', progress: 35, year: '2030', progressClass: 'progress-35' },
   ];
 
   const socialImpact = [
@@ -62,12 +70,7 @@ const Sustainability = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center"
-        style={{
-          backgroundImage: 'url(./assets/hero.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-sustainability"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
@@ -133,8 +136,9 @@ const Sustainability = () => {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
                   <div 
-                    className="bg-primary h-3 rounded-full transition-all duration-500"
-                    style={{ width: `${goal.progress}%` }}
+                    className={`bg-primary h-3 rounded-full transition-all duration-500 ${goal.progressClass}`}
+                    role="progressbar"
+                    {...getProgressBarProps(goal.progress)}
                   ></div>
                 </div>
                 <div className="text-right text-sm text-gray-600">{goal.progress}% Complete</div>

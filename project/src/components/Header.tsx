@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shirt } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  
+  // ARIA attributes
+  const ariaLabel = isMenuOpen ? 'Close navigation menu' : 'Open navigation menu';
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -64,7 +67,7 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary"
-            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={ariaLabel}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >

@@ -67,12 +67,7 @@ const Products = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center"
-        style={{
-          backgroundImage: 'url(./assets/designer-2.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-products"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">

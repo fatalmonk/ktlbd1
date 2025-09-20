@@ -45,13 +45,12 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
     <img
       src={absoluteSrc}
       alt={alt}
-      className={className}
+      className={`${className} ${fit === 'contain' ? 'object-contain' : 'object-cover'}`}
       width={width}
       height={height}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
       fetchPriority={priority ? 'high' : 'auto'}
-      style={{ objectFit: fit }}
       onError={() => setErrored(true)}
       sizes={sizes}
     />
@@ -63,7 +62,7 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   // If width/height provided, also wrap with an aspect-ratio container to avoid CLS when styled responsively.
   const aspectRatio = `${width}/${height}`;
   return (
-    <div className={containerClassName} style={{ aspectRatio }}>
+    <div className={`${containerClassName} aspect-[${aspectRatio}]`}>
       {img}
     </div>
   );

@@ -122,12 +122,7 @@ const Gallery = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center"
-        style={{
-          backgroundImage: 'url(./assets/hero.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-gallery"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
@@ -206,6 +201,7 @@ const Gallery = () => {
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-10"
+              aria-label="Close image modal"
             >
               <X size={32} />
             </button>
@@ -214,12 +210,14 @@ const Gallery = () => {
             <button
               onClick={() => navigateImage('prev')}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-primary transition-colors z-10"
+              aria-label="Previous image"
             >
               <ChevronLeft size={32} />
             </button>
             <button
               onClick={() => navigateImage('next')}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-primary transition-colors z-10"
+              aria-label="Next image"
             >
               <ChevronRight size={32} />
             </button>

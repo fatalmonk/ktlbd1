@@ -65,13 +65,13 @@ const Footer = () => {
             <div className="mt-6">
               <h5 className="font-heading font-semibold mb-3">Follow Us</h5>
               <div className="flex space-x-3">
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200" aria-label="Facebook">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary transition-colors duration-200" aria-label="Instagram">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>

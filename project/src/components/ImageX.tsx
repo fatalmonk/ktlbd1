@@ -41,4 +41,3 @@ const ImageX: React.FC<Props> = ({ src, alt, className, width, height }) => {
 };
 
 export default ImageX;
-

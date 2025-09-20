@@ -9,12 +9,15 @@ const Products = () => {
       description: "Premium quality men's clothing for all occasions",
       products: [
         { name: 'T-Shirts', description: 'Cotton and blended fabric t-shirts in various styles' },
-        { name: 'Polo Shirts', description: 'Professional polo shirts for business and casual wear' },
+        {
+          name: 'Polo Shirts',
+          description: 'Professional polo shirts for business and casual wear',
+        },
         { name: 'Pants & Trousers', description: 'Formal and casual pants in different fits' },
         { name: 'Shorts', description: 'Comfortable shorts for leisure and sports' },
       ],
       icon: Shirt,
-      image: 'designer-1.jpeg'
+      image: 'designer-1.jpeg',
     },
     {
       category: "Women's Wear",
@@ -26,11 +29,11 @@ const Products = () => {
         { name: 'Activewear', description: 'Comfortable athletic and leisure wear' },
       ],
       icon: Shirt,
-      image: 'designer-2.jpeg'
+      image: 'designer-2.jpeg',
     },
     {
       category: "Children's Wear",
-      description: "Safe, comfortable clothing for boys and girls",
+      description: 'Safe, comfortable clothing for boys and girls',
       products: [
         { name: 'Boys Clothing', description: 'T-shirts, shirts, pants, and shorts for boys' },
         { name: 'Girls Clothing', description: 'Dresses, tops, bottoms, and sets for girls' },
@@ -38,11 +41,11 @@ const Products = () => {
         { name: 'School Uniforms', description: 'Durable uniforms for educational institutions' },
       ],
       icon: Package,
-      image: 'hero.jpeg'
+      image: 'hero.jpeg',
     },
     {
-      category: "Sportswear",
-      description: "High-performance athletic and leisure wear",
+      category: 'Sportswear',
+      description: 'High-performance athletic and leisure wear',
       products: [
         { name: 'Swim Trunks', description: 'Quick-dry swimwear for men and boys' },
         { name: 'Athletic Wear', description: 'Performance clothing for sports and fitness' },
@@ -50,8 +53,8 @@ const Products = () => {
         { name: 'Leisure Wear', description: 'Comfortable clothing for relaxation' },
       ],
       icon: Package,
-      image: 'hero.jpg'
-    }
+      image: 'hero.jpg',
+    },
   ];
 
   const features = [
@@ -66,9 +69,7 @@ const Products = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-products"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-products">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
@@ -89,38 +90,48 @@ const Products = () => {
               Product <span className="text-primary">Categories</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We specialize in manufacturing a wide range of textile products 
-              for men, women, and children across various categories.
+              We specialize in manufacturing a wide range of textile products for men, women, and
+              children across various categories.
             </p>
           </div>
 
           <div className="space-y-20">
             {productCategories.map((category, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+              >
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                       <category.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-heading text-3xl font-bold text-gray-900">{category.category}</h3>
+                    <h3 className="font-heading text-3xl font-bold text-gray-900">
+                      {category.category}
+                    </h3>
                   </div>
-                  <p className="text-gray-600 text-lg mb-8 leading-relaxed">{category.description}</p>
-                  
+                  <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                    {category.description}
+                  </p>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     {category.products.map((product, productIndex) => (
-                      <div key={productIndex} className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                      <div
+                        key={productIndex}
+                        className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors"
+                      >
                         <h4 className="font-semibold text-gray-900 mb-2">{product.name}</h4>
                         <p className="text-gray-600 text-sm">{product.description}</p>
                       </div>
                     ))}
                   </div>
-                  
+
                   <button className="inline-flex items-center text-primary font-semibold hover:text-accent transition-colors group">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-                
+
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                   <div className="relative">
                     <ResponsiveImage
@@ -147,7 +158,10 @@ const Products = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
                 </div>
@@ -165,8 +179,8 @@ const Products = () => {
             Ready to Source Premium Textiles?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your requirements and get a customized quote 
-            for your textile sourcing needs.
+            Contact us today to discuss your requirements and get a customized quote for your
+            textile sourcing needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

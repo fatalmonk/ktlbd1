@@ -1,0 +1,290 @@
+{
+  "source": "https://ananta-bd.com/",
+  "lastReviewed": "2025-09-21",
+  "overall_style": {
+    "tone": ["corporate", "clean", "photo-led", "minimal", "premium"],
+    "layout_density": "spacious",
+    "grid_system": {
+      "type": "12-col",
+      "max_width_px": 1200,
+      "gutters_px": 24,
+      "section_vertical_rhythm": {
+        "hero_vh": 90,
+        "section_pad_y_px": [64, 96],
+        "section_pad_x_px": [16, 24]
+      }
+    },
+    "animation": {
+      "use": true,
+      "patterns": ["fade-in on scroll", "image hover zoom/brightness", "subtle slide-up"],
+      "duration_ms": [200, 400],
+      "easing": "ease-out"
+    }
+  },
+  "color_system": {
+    "notes": "No text content included. Palette defined semantically so you can map brand tones without copying content.",
+    "background": {
+      "base": "#FFFFFF",
+      "soft": "#F7F7F9"
+    },
+    "text": {
+      "primary": "#1F2328",
+      "secondary": "#515761",
+      "muted": "#727784",
+      "on_dark": "#FFFFFF"
+    },
+    "border": {
+      "subtle": "#E6E8EC",
+      "strong": "#D1D5DB"
+    },
+    "accents": {
+      "brand_primary": {
+        "role": "buttons/links/active nav",
+        "example_hex": "#0B1F3A",
+        "confidence": "medium",
+        "extraction_hint": "sample header logo/CTA tint"
+      },
+      "brand_secondary": {
+        "role": "hover states/dividers",
+        "example_hex": "#00A3B4",
+        "confidence": "low",
+        "extraction_hint": "sample design/innovation visuals if present"
+      },
+      "status": {
+        "info": "#2563EB",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626"
+      }
+    },
+    "overlays": {
+      "scrim_dark": "rgba(0,0,0,0.35)",
+      "scrim_light": "rgba(255,255,255,0.5)"
+    }
+  },
+  "typography": {
+    "families": {
+      "heading": {
+        "stack": ["'Poppins'", "'Montserrat'", "Inter", "system-ui", "sans-serif"],
+        "weight_usage": { "h1": 700, "h2": 700, "h3": 600, "h4": 600 }
+      },
+      "body": {
+        "stack": ["Inter", "system-ui", "Segoe UI", "Roboto", "sans-serif"],
+        "weight_usage": { "base": 400, "emphasis": 500 }
+      },
+      "numeric_display": {
+        "stack": ["Inter", "system-ui", "sans-serif"],
+        "features": ["tabular-nums"]
+      }
+    },
+    "scale": {
+      "h1": { "desktop_px": 48, "mobile_px": 34, "line_height": 1.1, "letter_spacing_em": -0.01 },
+      "h2": { "desktop_px": 36, "mobile_px": 28, "line_height": 1.15 },
+      "h3": { "desktop_px": 28, "mobile_px": 22, "line_height": 1.2 },
+      "h4": { "desktop_px": 22, "mobile_px": 18, "line_height": 1.25 },
+      "body_lg": { "px": 18, "line_height": 1.6 },
+      "body": { "px": 16, "line_height": 1.65 },
+      "caption": { "px": 14, "line_height": 1.5 },
+      "overline": { "px": 12, "tracking_em": 0.08, "case": "uppercase" }
+    }
+  },
+  "spacing_radii_shadows": {
+    "spacing_scale_px": [4, 8, 12, 16, 24, 32, 48, 64, 96],
+    "radius": {
+      "none": 0,
+      "sm": 6,
+      "md": 10,
+      "lg": 16,
+      "xl": 24,
+      "round": 999
+    },
+    "shadows": {
+      "soft": "0 8px 24px rgba(0,0,0,0.08)",
+      "medium": "0 12px 32px rgba(0,0,0,0.12)",
+      "hard": "0 2px 0 rgba(0,0,0,0.06)"
+    }
+  },
+  "imagery_art_direction": {
+    "style": ["full-bleed photos", "industrial facilities", "product lifestyle", "clean studio shots"],
+    "treatment": ["high contrast", "true-to-life color", "slight cool tint"],
+    "framing": ["wide hero banners", "masonry or grid category tiles", "card thumbnails"],
+    "overlay_rules": {
+      "apply_dark_scrim_on_bright_images": true,
+      "headline_contrast_minimum": "AA",
+      "text_on_image_preferred_sides": ["left", "center"]
+    }
+  },
+  "navigation_header": {
+    "position": "sticky",
+    "height_px": 72,
+    "logo_placement": "left",
+    "menu_alignment": "right",
+    "menu_structure": [
+      { "label_type": "top-level", "has_mega": false },
+      { "label_type": "products", "submenu": ["denims", "suits", "sweaters", "intimates", "outerwear", "activewear"] }
+    ],
+    "cta": { "presence": "single primary CTA", "style": "solid brand_primary", "corner": "md" },
+    "mobile": { "pattern": "hamburger drawer", "drawer_width_pct": 80 }
+  },
+  "footer": {
+    "columns": 3,
+    "layout": "grid",
+    "extras": ["copyright", "designer_credit", "minimal social"],
+    "tone": "subtle on light background"
+  },
+  "section_blueprints": [
+    {
+      "id": "hero",
+      "pattern": "full-bleed image with concise headline and single CTA",
+      "height_vh": 80,
+      "content_align": "left/center",
+      "image_overlay": "scrim_dark",
+      "evidence": "above-the-fold photo-led hero"
+    },
+    {
+      "id": "category_tiles",
+      "pattern": "2–3 row responsive grid of clickable tiles",
+      "tile_ratio": "3:2",
+      "hover": ["zoom", "brightness-95"],
+      "labels": "short titles only",
+      "evidence": "grid of product categories"
+    },
+    {
+      "id": "stats_band",
+      "pattern": "big numeric callouts (years, capacity, etc.)",
+      "typography": "numeric_display",
+      "columns_desktop": 3,
+      "evidence": "numeric milestones block"
+    },
+    {
+      "id": "facilities_carousel",
+      "pattern": "image-first cards linking to facility details",
+      "controls": "arrows/dots",
+      "card": { "radius": "lg", "shadow": "soft" },
+      "evidence": "facilities gallery section"
+    },
+    {
+      "id": "sustainability_callout",
+      "pattern": "full-width band with image + short supporting copy",
+      "bg": "soft",
+      "link_style": "button primary",
+      "evidence": "sustainability highlight block"
+    },
+    {
+      "id": "news_list",
+      "pattern": "card grid with thumbnail + headline + meta",
+      "columns_desktop": 3,
+      "card": { "image_top": true, "border": "subtle", "hover": "translateY(-2px)" },
+      "evidence": "latest news card section"
+    },
+    {
+      "id": "cta_band",
+      "pattern": "simple closing CTA with button",
+      "alignment": "center",
+      "evidence": "partner/contact CTA near footer"
+    }
+  ],
+  "components": {
+    "button": {
+      "sizes": {
+        "sm": { "py": 10, "px": 16, "font": 14 },
+        "md": { "py": 12, "px": 20, "font": 16 },
+        "lg": { "py": 14, "px": 24, "font": 18 }
+      },
+      "variants": {
+        "primary": { "bg": "{colors.accents.brand_primary}", "text": "#FFFFFF", "hover_bg": "shade(brand_primary, 10%)" },
+        "secondary": { "bg": "#FFFFFF", "text": "{colors.accents.brand_primary}", "border": "1px solid {colors.accents.brand_primary}" },
+        "ghost": { "bg": "transparent", "text": "{colors.text.primary}" }
+      },
+      "radius": "md",
+      "shadow": "hard"
+    },
+    "card": {
+      "image_top": true,
+      "radius": "lg",
+      "shadow": "soft",
+      "border": "1px solid {colors.border.subtle}",
+      "hover": { "shadow": "medium", "translateY_px": -2 }
+    },
+    "chip": {
+      "radius": "round",
+      "bg": "{colors.background.soft}",
+      "text": "{colors.text.secondary}",
+      "pad_y_px": 6,
+      "pad_x_px": 12
+    },
+    "navbar": {
+      "height_px": 72,
+      "bg": "#FFFFFF",
+      "text": "{colors.text.primary}",
+      "border_bottom": "1px solid {colors.border.subtle}",
+      "scroll_behavior": "shrink_on_scroll"
+    },
+    "footer": {
+      "bg": "#FFFFFF",
+      "text": "{colors.text.secondary}",
+      "border_top": "1px solid {colors.border.subtle}"
+    }
+  },
+  "forms": {
+    "field_height_px": 44,
+    "radius": "md",
+    "bg": "#FFFFFF",
+    "border": "1px solid {colors.border.strong}",
+    "focus": { "ring": "0 0 0 3px rgba(0,163,180,0.25)", "border": "{colors.accents.brand_primary}" },
+    "label": { "size_px": 14, "weight": 500 }
+  },
+  "icons": {
+    "style": "outline with occasional solid fills",
+    "stroke_width": 1.5,
+    "tone": "{colors.text.secondary}"
+  },
+  "link_styles": {
+    "default": {
+      "color": "{colors.accents.brand_primary}",
+      "decoration": "none",
+      "hover": { "decoration": "underline" }
+    },
+    "on_dark": { "color": "#FFFFFF", "decoration": "underline" }
+  },
+  "responsive_breakpoints_px": {
+    "xs": 360,
+    "sm": 480,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280
+  },
+  "accessibility": {
+    "contrast_target": "WCAG AA",
+    "focus_visible": true,
+    "hit_area_min_px": 44,
+    "prefers_reduced_motion": "respect"
+  },
+  "content_rules": {
+    "headings_case": "sentence case",
+    "heading_length_hint": "short and declarative",
+    "body_length_hint": "concise paragraphs",
+    "cta_rules": ["one primary CTA per section", "avoid button clutter"]
+  },
+  "replication_notes": {
+    "do_not_copy_text": true,
+    "structure_to_replicate": [
+      "sticky header",
+      "photo-led hero",
+      "category tiles grid",
+      "numeric stats band",
+      "facilities/gallery carousel",
+      "sustainability callout",
+      "news cards",
+      "closing CTA",
+      "three-column footer"
+    ],
+    "image_selection": "industrial + product lifestyle; maintain similar art direction and color temperature"
+  },
+  "evidence_citations": {
+    "hero_and_category_grid": "Observed on homepage structure (hero + product category tiles).  [oai_citation:0‡Ananta Group](https://ananta-bd.com/)",
+    "stats_and_facilities": "Numeric milestones and facilities/gallery sections visible.  [oai_citation:1‡Ananta Group](https://ananta-bd.com/)",
+    "sustainability_and_news": "Dedicated sustainability highlight and news card grid.  [oai_citation:2‡Ananta Group](https://ananta-bd.com/)",
+    "cta_footer": "Closing partner/contact CTA and minimal multi-column footer.  [oai_citation:3‡Ananta Group](https://ananta-bd.com/)"
+  }
+}

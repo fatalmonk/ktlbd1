@@ -1,37 +1,273 @@
+/* Import Google Fonts for Ananta typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Enhanced Typography System */
+@layer base {
+  html {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  body {
+    @apply antialiased;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  /* Enhanced heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-feature-settings: 'ss01', 'ss02';
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply font-semibold leading-tight tracking-tight;
+  }
+
+  /* Better text rendering */
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Custom utility classes for background images */
 @layer utilities {
   .bg-hero-sustainability {
-    background-image: url('./assets/hero.jpeg');
+    background-image: url('/assets/hero.jpeg');
   }
-  
+
   .bg-hero-about {
-    background-image: url('./assets/designer-2.jpeg');
+    background-image: url('/assets/designer-2.jpeg');
   }
-  
+
   .bg-hero-contact {
-    background-image: url('./assets/designer-1.jpeg');
+    background-image: url('/assets/designer-1.jpeg');
   }
-  
+
   .bg-hero-products {
-    background-image: url('./assets/designer-2.jpeg');
+    background-image: url('/assets/designer-2.jpeg');
   }
-  
+
   .bg-hero-manufacturing {
-    background-image: url('./assets/hero.jpeg');
+    background-image: url('/assets/hero.jpeg');
   }
-  
+
   .bg-hero-gallery {
-    background-image: url('./assets/hero.jpeg');
+    background-image: url('/assets/hero.jpeg');
   }
-  
+
   /* Progress bar utilities */
-  .progress-25 { width: 25%; }
-  .progress-35 { width: 35%; }
-  .progress-40 { width: 40%; }
-  .progress-60 { width: 60%; }
-  .progress-75 { width: 75%; }
+  .progress-25 {
+    width: 25%;
+  }
+  .progress-35 {
+    width: 35%;
+  }
+  .progress-40 {
+    width: 40%;
+  }
+  .progress-60 {
+    width: 60%;
+  }
+  .progress-75 {
+    width: 75%;
+  }
+
+  /* Enhanced glassmorphism effects */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-card-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+  }
+
+  /* Enhanced shadow utilities */
+  .shadow-soft {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+
+  .shadow-medium {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.08),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-large {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Enhanced typography utilities */
+  .text-display {
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none tracking-tight;
+  }
+
+  .text-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  .text-section {
+    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+
+  .text-subsection {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  /* Enhanced animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-2 shadow-large;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-glow:hover {
+    @apply shadow-lg shadow-primary/25;
+  }
+
+  /* Ananta Design System Components */
+  .btn-primary {
+    @apply bg-primary-500 text-white px-6 py-3 rounded-md font-medium hover:bg-primary-600 transition-colors duration-200 shadow-hard;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary-500 border border-primary-500 px-6 py-3 rounded-md font-medium hover:bg-primary-50 transition-colors duration-200;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-neutral-600 px-6 py-3 rounded-md font-medium hover:bg-neutral-100 transition-colors duration-200;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+
+  /* Card System */
+  .card-ananta {
+    @apply bg-white rounded-lg shadow-soft border border-neutral-200 overflow-hidden hover:shadow-medium hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .card-image-top {
+    @apply aspect-[3/2] overflow-hidden;
+  }
+
+  /* Chip System */
+  .chip {
+    @apply bg-neutral-100 text-neutral-500 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  /* Navigation System */
+  .nav-ananta {
+    @apply h-18 bg-white text-neutral-600 border-b border-neutral-200;
+  }
+
+  /* Form System */
+  .form-field {
+    @apply h-11 bg-white border border-neutral-300 rounded-md px-4 text-neutral-600 focus:ring-2 focus:ring-accent-500/25 focus:border-primary-500 transition-colors duration-200;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-neutral-600 mb-2 block;
+  }
+
+  /* Typography Utilities */
+  .text-numeric {
+    @apply font-numeric tabular-nums;
+  }
+
+  /* Animation Utilities */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-6 transition-all duration-400 ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-zoom {
+    @apply hover:scale-105 transition-transform duration-200;
+  }
+
+  .hover-brightness {
+    @apply hover:brightness-95 transition-all duration-200;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

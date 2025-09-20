@@ -19,10 +19,7 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       // Fix for TypeScript ESLint compatibility
       '@typescript-eslint/no-unused-expressions': 'off',
       'no-unused-expressions': 'off',

@@ -18,12 +18,7 @@ export default defineConfig({
 
     // Allow known preview hostnames to pass Vite's host check when tunneling or in cloud IDEs.
     // Set to `true` to disable checks entirely, but we prefer an allowlist for safety.
-    allowedHosts: [
-      'localhost',
-      '127.0.0.1',
-      '.repl.co',
-      '.id.repl.co',
-    ],
+    allowedHosts: ['localhost', '127.0.0.1', '.repl.co', '.id.repl.co'],
   },
   // Set base to root for deployment
   base: '/',
@@ -39,7 +34,11 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico|mp4|webm|ogg|mp3|wav|flac|aac|woff|woff2|eot|ttf|otf/i.test(ext)) {
+          if (
+            /png|jpe?g|svg|gif|tiff|bmp|ico|mp4|webm|ogg|mp3|wav|flac|aac|woff|woff2|eot|ttf|otf/i.test(
+              ext
+            )
+          ) {
             return `assets/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;

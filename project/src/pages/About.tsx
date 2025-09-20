@@ -5,31 +5,86 @@ const About = () => {
   const leadership = [
     {
       name: 'Nasreen Haque',
-      position: 'Chairman',
-      description: 'Visionary leader with extensive experience in textile industry development and strategic planning.',
+      position: 'Chairman & Founder',
+      description:
+        'Visionary leader with 20+ years of experience in textile industry development and strategic planning. Under her leadership, Kattali Textile has grown from a small startup to a major international manufacturer.',
+      image: './assets/designer-1.jpeg',
+      achievements: [
+        'Founded Kattali Textile in 2004',
+        'Led company to international markets',
+        'Champion of sustainable manufacturing',
+      ],
     },
     {
       name: 'Md. Emdadul Hoque Chowdhury',
       position: 'Managing Director',
-      description: 'Operations expert focused on sustainable manufacturing and international market expansion.',
+      description:
+        'Operations expert focused on sustainable manufacturing and international market expansion. Responsible for day-to-day operations and strategic partnerships with global brands.',
+      image: './assets/designer-2.jpeg',
+      achievements: [
+        'Overseeing 1,200+ employees',
+        'Managing 680+ production machines',
+        'Leading sustainability initiatives',
+      ],
+    },
+    {
+      name: 'Sarah Ahmed',
+      position: 'Head of Design & Innovation',
+      description:
+        'Creative director with expertise in contemporary fashion trends and sustainable design practices. Leads our design studio in creating innovative products for global markets.',
+      image: './assets/hero.jpeg',
+      achievements: [
+        '15+ years in fashion design',
+        'Expert in sustainable materials',
+        'International design awards',
+      ],
     },
   ];
 
   const milestones = [
-    { year: '2004', event: 'Company established in Chittagong' },
-    { year: '2008', event: 'First international export shipment' },
-    { year: '2012', event: 'Sedex certification achieved' },
-    { year: '2016', event: 'Green factory initiatives launched' },
-    { year: '2020', event: 'Production capacity reached 360,000 dozen/year' },
-    { year: '2024', event: 'Celebrating 20 years of excellence' },
+    {
+      year: '2004',
+      event: 'Company established in Chittagong',
+      description: 'Founded with a vision to become a leading textile manufacturer in Bangladesh',
+      icon: Calendar,
+    },
+    {
+      year: '2008',
+      event: 'First international export shipment',
+      description: 'Began exporting to European markets, establishing global presence',
+      icon: MapPin,
+    },
+    {
+      year: '2012',
+      event: 'Sedex certification achieved',
+      description:
+        'Obtained ethical trade certification, demonstrating commitment to responsible business',
+      icon: Award,
+    },
+    {
+      year: '2016',
+      event: 'Green factory initiatives launched',
+      description: 'Implemented sustainable manufacturing practices and eco-friendly processes',
+      icon: Target,
+    },
+    {
+      year: '2020',
+      event: 'Production capacity reached 360,000 dozen/year',
+      description: 'Significant expansion of manufacturing capabilities and workforce',
+      icon: Users2,
+    },
+    {
+      year: '2024',
+      event: 'Celebrating 20 years of excellence',
+      description: 'Two decades of innovation, growth, and commitment to quality',
+      icon: Eye,
+    },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-about"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-about">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
@@ -52,18 +107,20 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  Established in 2004, Kattali Textile Ltd is a Chittagong-based garment manufacturer 
-                  specializing in woven and knitwear exports. Over the past two decades, we have built 
-                  a reputation for delivering premium quality textiles to global markets.
+                  Established in 2004, Kattali Textile Ltd is a Chittagong-based garment
+                  manufacturer specializing in woven and knitwear exports. Over the past two
+                  decades, we have built a reputation for delivering premium quality textiles to
+                  global markets.
                 </p>
                 <p>
-                  Our commitment to excellence, sustainable practices, and ethical manufacturing has 
-                  made us a trusted partner for international brands seeking reliable textile sourcing 
-                  from Bangladesh.
+                  Our commitment to excellence, sustainable practices, and ethical manufacturing has
+                  made us a trusted partner for international brands seeking reliable textile
+                  sourcing from Bangladesh.
                 </p>
                 <p>
-                  With state-of-the-art manufacturing facilities, skilled workforce, and comprehensive 
-                  quality control systems, we ensure every product meets the highest international standards.
+                  With state-of-the-art manufacturing facilities, skilled workforce, and
+                  comprehensive quality control systems, we ensure every product meets the highest
+                  international standards.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-6 mt-8">
@@ -102,9 +159,9 @@ const About = () => {
               </div>
               <h3 className="font-heading text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To deliver excellence through sustainable and ethical garment manufacturing, 
-                providing our global partners with premium quality textiles while maintaining 
-                the highest standards of environmental and social responsibility.
+                To deliver excellence through sustainable and ethical garment manufacturing,
+                providing our global partners with premium quality textiles while maintaining the
+                highest standards of environmental and social responsibility.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg">
@@ -113,9 +170,9 @@ const About = () => {
               </div>
               <h3 className="font-heading text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To become a globally respected textile brand from Bangladesh, recognized for 
-                innovation, quality, and sustainable practices, while contributing to the 
-                economic development of our community and country.
+                To become a globally respected textile brand from Bangladesh, recognized for
+                innovation, quality, and sustainable practices, while contributing to the economic
+                development of our community and country.
               </p>
             </div>
           </div>
@@ -128,15 +185,37 @@ const About = () => {
           <h2 className="font-heading text-4xl font-bold text-center mb-16 text-gray-900">
             Our <span className="text-primary">Leadership</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {leadership.map((leader, index) => (
-              <div key={index} className="text-center">
-                <div className="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users2 className="w-24 h-24 text-gray-400" />
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <ResponsiveImage
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover"
+                    fit="cover"
+                    sizes="(min-width:768px) 33vw, 100vw"
+                  />
                 </div>
-                <h3 className="font-heading text-2xl font-bold mb-2 text-gray-900">{leader.name}</h3>
-                <h4 className="text-primary font-semibold text-lg mb-4">{leader.position}</h4>
-                <p className="text-gray-700 leading-relaxed">{leader.description}</p>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold mb-2 text-gray-900">
+                    {leader.name}
+                  </h3>
+                  <h4 className="text-primary font-semibold mb-4">{leader.position}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{leader.description}</p>
+                  <div className="space-y-2">
+                    <h5 className="font-semibold text-gray-900 text-sm">Key Achievements:</h5>
+                    {leader.achievements.map((achievement, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <span className="text-gray-600 text-sm">{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -149,15 +228,24 @@ const About = () => {
           <h2 className="font-heading text-4xl font-bold text-center mb-16 text-gray-900">
             Our <span className="text-primary">Journey</span>
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-12">
               {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-center space-x-6">
-                  <div className="flex-shrink-0 w-24 h-24 bg-primary rounded-full flex items-center justify-center">
-                    <span className="font-heading font-bold text-white text-lg">{milestone.year}</span>
+                <div key={index} className="flex items-start space-x-8">
+                  <div className="flex-shrink-0 w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                    <milestone.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-lg flex-grow">
-                    <p className="text-gray-700 text-lg">{milestone.event}</p>
+                  <div className="bg-white p-8 rounded-2xl shadow-lg flex-grow border-l-4 border-primary">
+                    <div className="flex items-center space-x-4 mb-3">
+                      <span className="font-heading font-bold text-primary text-2xl">
+                        {milestone.year}
+                      </span>
+                      <div className="h-px bg-gray-200 flex-grow"></div>
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-gray-900 mb-3">
+                      {milestone.event}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
                   </div>
                 </div>
               ))}
@@ -178,17 +266,22 @@ const About = () => {
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Head Office & Factory</h3>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                      Head Office & Factory
+                    </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      BM Heights, 8th Floor<br />
-                      318 Sk. Mujib Road, Agrabad<br />
+                      BM Heights, 8th Floor
+                      <br />
+                      318 Sk. Mujib Road, Agrabad
+                      <br />
                       Chittagong, Bangladesh
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Strategically located in Chittagong, Bangladesh's commercial capital and largest port city, 
-                  our facilities provide excellent access to international shipping routes and supply chains.
+                  Strategically located in Chittagong, Bangladesh's commercial capital and largest
+                  port city, our facilities provide excellent access to international shipping
+                  routes and supply chains.
                 </p>
               </div>
             </div>

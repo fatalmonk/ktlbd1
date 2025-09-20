@@ -14,90 +14,92 @@ const Gallery = () => {
       src: 'hero.jpeg',
       category: 'Factory Floor',
       title: 'Hero Manufacturing Facility',
-      description: 'Our state-of-the-art production facility showcasing modern manufacturing capabilities'
+      description:
+        'Our state-of-the-art production facility showcasing modern manufacturing capabilities',
     },
     {
       id: 2,
       src: 'designer-1.jpeg',
       category: 'Products',
       title: 'Premium Textile Products',
-      description: 'High-quality garments and textiles ready for international markets'
+      description: 'High-quality garments and textiles ready for international markets',
     },
     {
       id: 3,
       src: 'designer-2.jpeg',
       category: 'Factory Floor',
       title: 'Advanced Manufacturing Equipment',
-      description: 'Cutting-edge machinery and production lines for efficient manufacturing'
+      description: 'Cutting-edge machinery and production lines for efficient manufacturing',
     },
     {
       id: 4,
       src: 'hero.jpg',
       category: 'Products',
       title: 'Textile Excellence',
-      description: 'Superior quality textiles and finished products'
+      description: 'Superior quality textiles and finished products',
     },
     {
       id: 5,
       src: 'designer-1.jpeg',
       category: 'Workers',
       title: 'Skilled Workforce',
-      description: 'Our experienced team ensuring quality production standards'
+      description: 'Our experienced team ensuring quality production standards',
     },
     {
       id: 6,
       src: 'designer-2.jpeg',
       category: 'Factory Floor',
       title: 'Quality Control Department',
-      description: 'Rigorous quality checking processes and standards'
+      description: 'Rigorous quality checking processes and standards',
     },
     {
       id: 7,
       src: 'hero.jpeg',
       category: 'Products',
       title: 'Sustainable Textiles',
-      description: 'Eco-friendly and sustainable textile manufacturing'
+      description: 'Eco-friendly and sustainable textile manufacturing',
     },
     {
       id: 8,
       src: 'designer-1.jpeg',
       category: 'Workers',
       title: 'Team Collaboration',
-      description: 'Coordinated teamwork for efficient production processes'
+      description: 'Coordinated teamwork for efficient production processes',
     },
     {
       id: 9,
       src: 'designer-2.jpeg',
       category: 'CSR Activities',
       title: 'Community Development',
-      description: 'Supporting local community and social responsibility initiatives'
+      description: 'Supporting local community and social responsibility initiatives',
     },
     {
       id: 10,
       src: 'hero.jpg',
       category: 'Factory Floor',
       title: 'Production Excellence',
-      description: 'Advanced production techniques and quality assurance'
+      description: 'Advanced production techniques and quality assurance',
     },
     {
       id: 11,
       src: 'designer-1.jpeg',
       category: 'CSR Activities',
       title: 'Environmental Sustainability',
-      description: 'Green practices and environmental protection efforts'
+      description: 'Green practices and environmental protection efforts',
     },
     {
       id: 12,
       src: 'designer-2.jpeg',
       category: 'Workers',
       title: 'Professional Development',
-      description: 'Continuous training and skill development programs'
+      description: 'Continuous training and skill development programs',
     },
   ];
 
-  const filteredImages = selectedCategory === 'All' 
-    ? images 
-    : images.filter(image => image.category === selectedCategory);
+  const filteredImages =
+    selectedCategory === 'All'
+      ? images
+      : images.filter((image) => image.category === selectedCategory);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -109,7 +111,7 @@ const Gallery = () => {
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (selectedImage === null) return;
-    
+
     const currentImages = filteredImages;
     if (direction === 'prev') {
       setSelectedImage(selectedImage > 0 ? selectedImage - 1 : currentImages.length - 1);
@@ -121,9 +123,7 @@ const Gallery = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-gallery"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-gallery">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
@@ -235,7 +235,9 @@ const Gallery = () => {
             {/* Image Info */}
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <div className="bg-black/70 p-4 rounded-lg">
-                <h3 className="font-semibold text-xl mb-2">{filteredImages[selectedImage].title}</h3>
+                <h3 className="font-semibold text-xl mb-2">
+                  {filteredImages[selectedImage].title}
+                </h3>
                 <p className="text-white/80">{filteredImages[selectedImage].description}</p>
                 <span className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mt-2">
                   {filteredImages[selectedImage].category}

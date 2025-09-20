@@ -6,13 +6,13 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -43,7 +43,11 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 2:00 PM', 'Sunday: Closed'],
+      details: [
+        'Monday - Friday: 9:00 AM - 6:00 PM',
+        'Saturday: 9:00 AM - 2:00 PM',
+        'Sunday: Closed',
+      ],
     },
   ];
 
@@ -56,16 +60,15 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-contact"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-contact">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
               Get In <span className="text-primary">Touch</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Ready to partner with us? Contact our team for textile sourcing, manufacturing inquiries, or facility visits
+              Ready to partner with us? Contact our team for textile sourcing, manufacturing
+              inquiries, or facility visits
             </p>
           </div>
         </div>
@@ -205,10 +208,11 @@ const Contact = () => {
               Visit Our <span className="text-primary">Facility</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Located in the heart of Chittagong's commercial district with easy access to the port and transportation networks.
+              Located in the heart of Chittagong's commercial district with easy access to the port
+              and transportation networks.
             </p>
           </div>
-          
+
           {/* Placeholder for Google Maps */}
           <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
             <div className="text-center text-gray-500">
@@ -229,8 +233,8 @@ const Contact = () => {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Whether you need textile sourcing, manufacturing services, or want to schedule a facility visit, 
-            our team is ready to help you succeed.
+            Whether you need textile sourcing, manufacturing services, or want to schedule a
+            facility visit, our team is ready to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

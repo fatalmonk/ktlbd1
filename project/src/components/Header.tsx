@@ -5,7 +5,7 @@ import { Menu, X, Shirt } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  
+
   // ARIA attributes
   const ariaLabel = isMenuOpen ? 'Close navigation menu' : 'Open navigation menu';
 
@@ -24,17 +24,17 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+      <div className="max-w-ananta mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Shirt className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/30">
+              <Shirt className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h1 className="font-heading font-bold text-xl text-gray-900">Kattali Textile</h1>
-              <p className="text-xs text-gray-600">Since 2004</p>
+              <h1 className="font-heading font-bold text-xl text-white">Kattali Textile</h1>
+              <p className="text-xs text-white/80">Since 2004</p>
             </div>
           </Link>
 
@@ -46,8 +46,8 @@ const Header = () => {
                 to={item.href}
                 className={`font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-primary border-b-2 border-primary pb-1'
-                    : 'text-gray-700 hover:text-primary'
+                    ? 'text-white border-b-2 border-white pb-1'
+                    : 'text-white/90 hover:text-white'
                 }`}
               >
                 {item.name}
@@ -58,7 +58,7 @@ const Header = () => {
           {/* CTA Button */}
           <Link
             to="/contact"
-            className="hidden lg:block bg-primary text-white px-6 py-2 rounded-md font-medium hover:bg-accent transition-colors duration-200"
+            className="hidden lg:block btn-primary bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-colors duration-200"
           >
             Get Quote
           </Link>
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary"
+            className="lg:hidden p-2 rounded-md text-white hover:text-white/80"
             aria-label={ariaLabel}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -78,7 +78,11 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div id="mobile-menu" className="lg:hidden pb-4">
-            <nav className="flex flex-col space-y-3" role="navigation" aria-label="Mobile navigation">
+            <nav
+              className="flex flex-col space-y-3 bg-black/80 backdrop-blur-sm rounded-lg p-4"
+              role="navigation"
+              aria-label="Mobile navigation"
+            >
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -86,8 +90,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`font-medium transition-colors duration-200 py-2 ${
                     isActive(item.href)
-                      ? 'text-primary border-l-4 border-primary pl-4'
-                      : 'text-gray-700 hover:text-primary pl-4'
+                      ? 'text-white border-l-4 border-white pl-4'
+                      : 'text-white/90 hover:text-white pl-4'
                   }`}
                 >
                   {item.name}
@@ -96,7 +100,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-accent transition-colors duration-200 ml-4 mr-4 text-center"
+                className="btn-primary bg-white/20 border border-white/30 text-white hover:bg-white/30 transition-colors duration-200 ml-4 mr-4 text-center"
               >
                 Get Quote
               </Link>

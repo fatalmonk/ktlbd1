@@ -6,22 +6,26 @@ const Manufacturing = () => {
     {
       icon: Settings,
       title: '680 Machines',
-      description: 'State-of-the-art manufacturing equipment including cutting-edge sewing machines, cutting tables, and finishing equipment.',
+      description:
+        'State-of-the-art manufacturing equipment including cutting-edge sewing machines, cutting tables, and finishing equipment.',
     },
     {
       icon: Users,
       title: '1,200+ Employees',
-      description: 'Skilled workforce including 750+ experienced operators, quality controllers, and technical specialists.',
+      description:
+        'Skilled workforce including 750+ experienced operators, quality controllers, and technical specialists.',
     },
     {
       icon: Package,
       title: '360,000 Dozen/Year',
-      description: 'Annual production capacity ensuring reliable supply for large-scale international orders.',
+      description:
+        'Annual production capacity ensuring reliable supply for large-scale international orders.',
     },
     {
       icon: Clock,
       title: 'Timely Delivery',
-      description: 'Efficient production planning and logistics management for on-time delivery to global destinations.',
+      description:
+        'Efficient production planning and logistics management for on-time delivery to global destinations.',
     },
   ];
 
@@ -29,22 +33,26 @@ const Manufacturing = () => {
     {
       step: '01',
       title: 'Design & Development',
-      description: 'Collaborative design process with technical specifications and sample development.',
+      description:
+        'Collaborative design process with technical specifications and sample development.',
     },
     {
       step: '02',
       title: 'Raw Material Sourcing',
-      description: 'Quality fabric procurement from certified suppliers with strict quality standards.',
+      description:
+        'Quality fabric procurement from certified suppliers with strict quality standards.',
     },
     {
       step: '03',
       title: 'Cutting & Preparation',
-      description: 'Precision cutting using computer-aided cutting systems for optimal fabric utilization.',
+      description:
+        'Precision cutting using computer-aided cutting systems for optimal fabric utilization.',
     },
     {
       step: '04',
       title: 'Manufacturing',
-      description: 'Skilled operators using advanced machinery for high-quality garment production.',
+      description:
+        'Skilled operators using advanced machinery for high-quality garment production.',
     },
     {
       step: '05',
@@ -59,24 +67,35 @@ const Manufacturing = () => {
   ];
 
   const qualityFeatures = [
-    { icon: Shield, title: 'Quality Assurance', description: 'Comprehensive QC at every production stage' },
-    { icon: Award, title: 'International Standards', description: 'Compliance with global quality certifications' },
-    { icon: Zap, title: 'Efficiency', description: 'Optimized production processes for maximum efficiency' },
+    {
+      icon: Shield,
+      title: 'Quality Assurance',
+      description: 'Comprehensive QC at every production stage',
+    },
+    {
+      icon: Award,
+      title: 'International Standards',
+      description: 'Compliance with global quality certifications',
+    },
+    {
+      icon: Zap,
+      title: 'Efficiency',
+      description: 'Optimized production processes for maximum efficiency',
+    },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-manufacturing"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-manufacturing">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
               Manufacturing <span className="text-primary">Excellence</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Advanced facilities, skilled workforce, and proven processes for premium textile production
+              Advanced facilities, skilled workforce, and proven processes for premium textile
+              production
             </p>
           </div>
         </div>
@@ -90,18 +109,23 @@ const Manufacturing = () => {
               Our Manufacturing <span className="text-primary">Capabilities</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With decades of experience and continuous investment in technology, 
-              we deliver world-class manufacturing services.
+              With decades of experience and continuous investment in technology, we deliver
+              world-class manufacturing services.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center"
+              >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <capability.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-4 text-gray-900">{capability.title}</h3>
+                <h3 className="font-heading text-xl font-bold mb-4 text-gray-900">
+                  {capability.title}
+                </h3>
                 <p className="text-gray-600 leading-relaxed">{capability.description}</p>
               </div>
             ))}
@@ -117,14 +141,17 @@ const Manufacturing = () => {
               Our Manufacturing <span className="text-primary">Process</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From concept to delivery, our streamlined process ensures quality, 
-              efficiency, and customer satisfaction.
+              From concept to delivery, our streamlined process ensures quality, efficiency, and
+              customer satisfaction.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processes.map((process, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
                     {process.step}
@@ -152,8 +179,10 @@ const Manufacturing = () => {
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900 mb-2">Factory Address</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      BM Heights, 8th Floor<br />
-                      318 Sk. Mujib Road, Agrabad<br />
+                      BM Heights, 8th Floor
+                      <br />
+                      318 Sk. Mujib Road, Agrabad
+                      <br />
                       Chittagong, Bangladesh
                     </p>
                   </div>
@@ -207,11 +236,16 @@ const Manufacturing = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {qualityFeatures.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-4 text-gray-900">{feature.title}</h3>
+                <h3 className="font-heading text-xl font-bold mb-4 text-gray-900">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}

@@ -8,29 +8,33 @@ const Sustainability = () => {
     'aria-valuenow': progress.toString(),
     'aria-valuemin': '0',
     'aria-valuemax': '100',
-    'aria-label': `Progress: ${progress}%`
+    'aria-label': `Progress: ${progress}%`,
   });
 
   const initiatives = [
     {
       icon: Droplets,
       title: 'Wastewater Recycling',
-      description: 'Advanced water treatment systems that recycle and purify wastewater, reducing environmental impact and conserving precious water resources.',
+      description:
+        'Advanced water treatment systems that recycle and purify wastewater, reducing environmental impact and conserving precious water resources.',
     },
     {
       icon: Zap,
       title: 'Energy-Efficient Machinery',
-      description: 'Investment in modern, energy-efficient equipment that reduces power consumption while maintaining high production standards.',
+      description:
+        'Investment in modern, energy-efficient equipment that reduces power consumption while maintaining high production standards.',
     },
     {
       icon: Users,
       title: 'Women-Led Operations',
-      description: 'Empowering women in the workplace with 750+ female operators leading our production lines and promoting gender equality.',
+      description:
+        'Empowering women in the workplace with 750+ female operators leading our production lines and promoting gender equality.',
     },
     {
       icon: Heart,
       title: 'Ethical Labor Policies',
-      description: 'Fair wages, safe working conditions, and comprehensive benefits ensuring the wellbeing of all our employees.',
+      description:
+        'Fair wages, safe working conditions, and comprehensive benefits ensuring the wellbeing of all our employees.',
     },
   ];
 
@@ -53,14 +57,28 @@ const Sustainability = () => {
   ];
 
   const environmentalGoals = [
-    { goal: 'Reduce water consumption by 30%', progress: 75, year: '2025', progressClass: 'progress-75' },
-    { goal: 'Achieve 50% renewable energy usage', progress: 40, year: '2026', progressClass: 'progress-40' },
+    {
+      goal: 'Reduce water consumption by 30%',
+      progress: 75,
+      year: '2025',
+      progressClass: 'progress-75',
+    },
+    {
+      goal: 'Achieve 50% renewable energy usage',
+      progress: 40,
+      year: '2026',
+      progressClass: 'progress-40',
+    },
     { goal: 'Zero waste to landfill', progress: 60, year: '2025', progressClass: 'progress-60' },
     { goal: 'Carbon neutral operations', progress: 35, year: '2030', progressClass: 'progress-35' },
   ];
 
   const socialImpact = [
-    { metric: '1,200+', label: 'Employees Supported', description: 'Direct employment opportunities' },
+    {
+      metric: '1,200+',
+      label: 'Employees Supported',
+      description: 'Direct employment opportunities',
+    },
     { metric: '75%', label: 'Female Workforce', description: 'Women empowerment in operations' },
     { metric: '20+', label: 'Community Programs', description: 'Local development initiatives' },
     { metric: '5,000+', label: 'Families Impacted', description: 'Through various CSR activities' },
@@ -69,16 +87,15 @@ const Sustainability = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-sustainability"
-      >
+      <section className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center bg-hero-sustainability">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6">
               Sustainability & <span className="text-primary">Ethics</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Committed to responsible manufacturing practices that protect our planet and empower our people
+              Committed to responsible manufacturing practices that protect our planet and empower
+              our people
             </p>
           </div>
         </div>
@@ -92,20 +109,26 @@ const Sustainability = () => {
               Our Eco <span className="text-primary">Initiatives</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe in manufacturing excellence that doesn't compromise environmental responsibility. 
-              Our initiatives focus on reducing our ecological footprint while maintaining quality.
+              We believe in manufacturing excellence that doesn't compromise environmental
+              responsibility. Our initiatives focus on reducing our ecological footprint while
+              maintaining quality.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {initiatives.map((initiative, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <initiative.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">{initiative.title}</h3>
+                    <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">
+                      {initiative.title}
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">{initiative.description}</p>
                   </div>
                 </div>
@@ -123,7 +146,8 @@ const Sustainability = () => {
               Environmental <span className="text-primary">Goals</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our commitment to sustainability is measured through concrete goals and continuous progress tracking.
+              Our commitment to sustainability is measured through concrete goals and continuous
+              progress tracking.
             </p>
           </div>
 
@@ -135,7 +159,7 @@ const Sustainability = () => {
                   <span className="text-primary font-bold">Target: {goal.year}</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
-                  <div 
+                  <div
                     className={`bg-primary h-3 rounded-full transition-all duration-500 ${goal.progressClass}`}
                     role="progressbar"
                     {...getProgressBarProps(goal.progress)}
@@ -162,7 +186,10 @@ const Sustainability = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <cert.icon className="w-10 h-10 text-primary" />
                 </div>
@@ -182,15 +209,20 @@ const Sustainability = () => {
               Social <span className="text-primary">Impact</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Beyond environmental responsibility, we're committed to creating positive social impact 
-              in our community and among our workforce.
+              Beyond environmental responsibility, we're committed to creating positive social
+              impact in our community and among our workforce.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {socialImpact.map((impact, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
-                <div className="text-4xl font-heading font-bold text-primary mb-2">{impact.metric}</div>
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
+                <div className="text-4xl font-heading font-bold text-primary mb-2">
+                  {impact.metric}
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{impact.label}</h3>
                 <p className="text-gray-600 text-sm">{impact.description}</p>
               </div>
@@ -209,17 +241,17 @@ const Sustainability = () => {
               </h2>
               <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  Since our establishment in 2004, sustainability has been at the core of our operations. 
-                  We recognize that responsible manufacturing is not just good for business, but essential 
-                  for the future of our planet and communities.
+                  Since our establishment in 2004, sustainability has been at the core of our
+                  operations. We recognize that responsible manufacturing is not just good for
+                  business, but essential for the future of our planet and communities.
                 </p>
                 <p>
-                  Our journey towards sustainable practices includes continuous investment in cleaner 
-                  technologies, employee welfare programs, and community development initiatives that 
-                  create lasting positive impact.
+                  Our journey towards sustainable practices includes continuous investment in
+                  cleaner technologies, employee welfare programs, and community development
+                  initiatives that create lasting positive impact.
                 </p>
                 <p>
-                  We're proud to be part of the global movement towards more sustainable fashion and 
+                  We're proud to be part of the global movement towards more sustainable fashion and
                   textiles, setting standards that inspire others in the industry to follow suit.
                 </p>
               </div>
@@ -251,8 +283,8 @@ const Sustainability = () => {
             Partner with a Sustainable Future
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join us in our commitment to responsible manufacturing. Together, we can create 
-            quality products while protecting our planet for future generations.
+            Join us in our commitment to responsible manufacturing. Together, we can create quality
+            products while protecting our planet for future generations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

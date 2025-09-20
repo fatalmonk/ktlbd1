@@ -61,12 +61,7 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 
   // If width/height provided, also wrap with an aspect-ratio container to avoid CLS when styled responsively.
   const aspectRatio = `${width}/${height}`;
-  return (
-    <div className={`${containerClassName} aspect-[${aspectRatio}]`}>
-      {img}
-    </div>
-  );
+  return <div className={`${containerClassName} aspect-[${aspectRatio}]`}>{img}</div>;
 };
 
 export default ResponsiveImage;
-

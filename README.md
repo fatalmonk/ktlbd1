@@ -208,10 +208,6 @@ For deployment issues, check:
 
 This project is proprietary software for Kattali Textile Ltd.
 
-## 👨‍💻 Development Team
-
-**Website Builder**: [IoriImasu](https://github.com/IoriImasu)
-
 Built with modern web technologies and best practices for optimal performance and user experience.
 
 ---
